@@ -35,12 +35,12 @@ const KNOWN_GOOD_LANGUAGES = ['en', 'es', 'ja', 'nl', 'it', 'sl'];
 const getInitialLocale = () => [
   navigator.language.toLowerCase(),
   navigator.language.toLowerCase().split('-')[0]
-].find(i => KNOWN_GOOD_LANGUAGES.includes(i) && allMessages[i]) || 'en';
+].find(i => KNOWN_GOOD_LANGUAGES.includes(i) && allMessages[i]) || 'zh-cn';
 
 const locale = writablePersistentStore('P4.locale', getInitialLocale());
 locale.subscribe((lang) => {
   if (!allMessages[lang]) {
-    locale.set('en');
+    locale.set('zh-cn');
   }
   document.documentElement.lang = lang;
 });
