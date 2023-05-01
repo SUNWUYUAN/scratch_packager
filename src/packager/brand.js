@@ -27,8 +27,8 @@ If this is set to an empty string, the link is removed.
 */
 
 module.exports = {
-  APP_NAME: 'TurboWarp Packager',
-  WEBSITE: 'https://packager.turbowarp.org/',
+  APP_NAME: 'OurWorldScratch项目打包',
+  WEBSITE: 'https://packager.192325.xyz/',
   COPYRIGHT_NOTICE: `Copyright (C) 2021-2022 Thomas Weber
 
 Licensed under the Apache License, Version 2.0 (the "License");
