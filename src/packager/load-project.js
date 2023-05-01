@@ -41,7 +41,7 @@ const fromURL = async (url, progressCallback) => {
 
 const fromID = (id, token, progressCallback) => {
   const tokenPart = token ? `?token=${token}` : '';
-  const url = `https://projects.scratch.mit.edu/${id}${tokenPart}`;
+  const url = `https://ourworld.wuyuan.dev/scratch/play/project/${id}`;
   return fromURL(url, progressCallback);
 };
 
