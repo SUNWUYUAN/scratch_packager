@@ -71,6 +71,7 @@ export const downloadProject = async (projectData, progressCallback = () => {}) 
   let analysis = unknownAnalysis();
 
   const options = {
+    assetHost: 'https://ourworld-qiniu.wuyuan.dev/material/asset/$id',
     onProgress(type, loaded, total) {
       progressCallback(type, loaded, total);
     },
@@ -84,8 +85,8 @@ export const downloadProject = async (projectData, progressCallback = () => {}) 
       if (type === 'sb2') {
         analysis = analyzeScratch2(projectData);
       }
-    },
-    assetHost: 'https://ourworld-qiniu.wuyuan.dev/material/asset/$id'
+    }
+        
   };
 
   const project = await downloadProjectFromBuffer(projectData, options);
