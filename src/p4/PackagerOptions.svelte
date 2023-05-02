@@ -659,7 +659,7 @@
           <label class="option">
             {$_('options.cloudVariablesHost')}
             <!-- Examples of valid values: -->
-            <!-- wss://scr-variable.192325.xyz -->
+            <!-- wss://cloud-server-wuyuancat.cloud.okteto.net -->
             <!-- ws:localhost:8080 -->
             <input type="text" bind:value={$options.cloudVariables.cloudHost} pattern="wss?:.*">
           </label>
