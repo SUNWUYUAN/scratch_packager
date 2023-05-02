@@ -236,7 +236,9 @@
     <h2>{$_('select.select')}</h2>
     <p>{$_('select.selectHelp')}</p>
 
-      <div class="option">
+    <div class="options">
+      
+<div class="option">
         <label>
           <input type="radio" name="project-type" bind:group={$type} value="url">
           {$_('select.id')}
@@ -245,8 +247,7 @@
           <input type="text" bind:value={$projectUrl} spellcheck="false" placeholder="https://..." on:keypress={submitOnEnter}>
         {/if}
       </div>
-
-
+      
       <!-- TurboWarp Desktop looks for the file-input-option class for special handling, so be careful when modifying this. -->
       <div class="option file-input-option">
         <label>
