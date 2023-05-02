@@ -237,16 +237,17 @@
     <p>{$_('select.selectHelp')}</p>
 
     <div class="options">
-      
-<div class="option">
+    
+      <div class="option">
         <label>
           <input type="radio" name="project-type" bind:group={$type} value="url">
           {$_('select.id')}
         </label>
         {#if $type === "url"}
-          <input type="text" bind:value={$projectUrl} spellcheck="false" placeholder="https://..." on:keypress={submitOnEnter}>
+          <input type="text" bind:value={$projectUrl} spellcheck="false" placeholder="https://..." on:keypress={submitOnEnter} on:input={handleInput}>
         {/if}
       </div>
+
       
       <!-- TurboWarp Desktop looks for the file-input-option class for special handling, so be careful when modifying this. -->
       <div class="option file-input-option">
@@ -256,7 +257,6 @@
         </label>
         <input hidden={$type !== "file"} on:change={handleFileInputChange} bind:this={fileInputElement} type="file" accept=".sb,.sb2,.sb3">
       </div>
-
       
     </div>
 
