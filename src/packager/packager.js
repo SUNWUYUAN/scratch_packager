@@ -46,7 +46,7 @@ const SELF_LICENSE = {
 
 const SCRATCH_LICENSE = {
   title: 'Scratch',
-  homepage: 'https://scratch1.mit.edu/',
+  homepage: 'https://scratch.mit.edu/',
   license: `Copyright (c) 2016, Massachusetts Institute of Technology
 All rights reserved.
 
