@@ -18,19 +18,19 @@
     "postpublish": "node src/build/nodejs/update-readme.js restore"
   },
   "author": "GarboMuffin",
-  "homepage": "https://github.com/TurboWarp/packager#readme",
+  "homepage": "https://github.com/SUNWUYUAN/scratch_packager#readme",
   "keywords": [
     "scratch",
     "packager"
   ],
   "bugs": {
-    "url": "https://github.com/TurboWarp/packager/issues"
+    "url": "https://github.com/SUNWUYUAN/scratch_packager/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/TurboWarp/packager.git"
+    "url": "https://github.com/SUNWUYUAN/scratch_packager.git"
   },
-  "funding": "https://github.com/sponsors/GarboMuffin",
+  "funding": "https://wuyuan.dev",
   "license": "Apache-2.0",
   "dependencies": {
     "@fiahfy/icns": "0.0.7",

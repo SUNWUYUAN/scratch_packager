@@ -43,14 +43,14 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.`,
   ACCENT_COLOR: '#ff4c4c',
-  SOURCE_CODE: 'https://github.com/TurboWarp/packager',
+  SOURCE_CODE: 'https://github.com/SUNWUYUAN/scratch_packager',
   FEEDBACK_PRIMARY: {
     name: 'Scratch',
-    link: 'https://scratch.mit.edu/users/GarboMuffin/#comments'
+    link: 'https://ourworld.wuyuan.dev'
   },
   FEEDBACK_SECONDARY: {
     name: 'GitHub',
-    link: 'https://github.com/TurboWarp/packager/issues'
+    link: 'https://github.com/SUNWUYUAN/scratch_packager/issues'
   },
-  DONATE: 'https://github.com/sponsors/GarboMuffin',
+  DONATE: 'https://wuyuan.dev',
 };
