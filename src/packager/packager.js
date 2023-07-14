@@ -1001,7 +1001,7 @@ cd "$(dirname "$0")"
     };
 
     /** @type {string[]} */
-    const allURLs = this.options.extensions.map(i => i.url);
+    const allURLs = this.options.extensions;
     const unfetchableURLs = allURLs.filter((url) => !shouldTryToFetch(url));
     const urlsToFetch = allURLs.filter((url) => shouldTryToFetch(url));
     const finalURLs = [...unfetchableURLs];
@@ -1019,6 +1019,7 @@ cd "$(dirname "$0")"
           const dataURI = `data:text/javascript;,${encodeURIComponent(wrappedSource)}`;
           finalURLs.push(dataURI);
         } catch (e) {
+          console.warn('Could not bake extension', url, e);
           finalURLs.push(url);
         }
       }
@@ -1177,7 +1178,7 @@ cd "$(dirname "$0")"
     .sc-canvas {
       cursor: ${await this.generateCursor()};
     }
-    .sc-monitor-root[opcode^="data_"] .sc-monitor-value-color {
+    .sc-monitor-root[data-opcode^="data_"] .sc-monitor-value-color {
       background-color: ${this.options.monitors.variableColor};
     }
     .sc-monitor-row-value-outer {
@@ -1393,6 +1394,7 @@ cd "$(dirname "$0")"
         enabled: ${this.options.compiler.enabled},
         warpTimer: ${this.options.compiler.warpTimer}
       });
+      if (vm.renderer.setMaxTextureDimension) vm.renderer.setMaxTextureDimension(${this.options.maxTextureDimension});
 
       if (typeof ScaffoldingAddons !== 'undefined') {
         ScaffoldingAddons.run(scaffolding, ${JSON.stringify(this.getAddonOptions())});
@@ -1624,7 +1626,8 @@ Packager.DEFAULT_OPTIONS = () => ({
     }
   },
   extensions: [],
-  bakeExtensions: true
+  bakeExtensions: true,
+  maxTextureDimension: 2048
 });
 
 export default Packager;
